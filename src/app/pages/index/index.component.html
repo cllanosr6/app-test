@@ -1,0 +1,33 @@
+<nav class="navbar bg-dark bg-body-tertiary" data-bs-theme="dark">
+  <div class="container-fluid">
+    <a class="navbar-brand">Platos</a>
+  </div>
+</nav>
+
+<button type="button" class="btn btn-info" (click)="agregar()">Agregar plato</button>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Nombre</th>
+      <th scope="col">Precio</th>
+      <th scope="col">color</th>
+      <th scope="col">Descripción</th>
+      <th scope="col">Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let l of lista">
+      <td>{{ l.nombre }}</td>
+      <td>{{ l.precio }}</td>
+      <td>{{ l.color }}</td>
+      <td>{{ l.campos }}</td>
+      <td>
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-primary">Modificar</button>
+            <button type="button" class="btn btn-danger">Eliminar</button>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>        
